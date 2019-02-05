@@ -1,0 +1,12 @@
+Look for the exercise template files in the folder Exercise Template Files.
+
+1. Create files for a custom symbol named basicvalue
+
+   a. In newly created sym-basicvalue.js add code from the SymbolTemplate.js file
+   
+2. In sym-basicvalue-template.html, create a simple Expression to display “Hello, <your Name>!”
+
+3. In sym-basicvalue-template.html, create a simple Expression to display the result of (6*7)
+
+Extra Credit: 
+Add a div element. Inside the div, include a h1 element that displays “Value:” followed by an h2 element displaying the value of (6*7)
