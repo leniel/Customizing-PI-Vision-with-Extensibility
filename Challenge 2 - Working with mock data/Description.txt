@@ -1,0 +1,8 @@
+1. In sym-basicvalue.js, add a data object dataItem with Timestamp and Value properties.
+2. Assign this data object to the Time and Value properties of scope.
+3. Display the Timestamp of the data item inside <h3> tag.
+4. Display the Value of the data item inside <h3> tag
+
+
+Extra Credit:
+Open Chrome Developer Tools – Figure out how to change the background-color property for your symbol using the Styles Pane
