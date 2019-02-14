@@ -1,0 +1,10 @@
+Challenge 5 - Working with the Timeseries DataShape
+
+1. In sym-archivedata.js, add a data update function and name it dataUpdate, pass it newdata as a parameter
+2. Change DataShape of the symbol to handle time series data
+3. Display Label and UOM parameters inside <h3> tags
+4. Display all the historical data (timestamps and values) inside <div> tags.
+
+
+Extra Credit:
+Add a custom icon for your symbol (Hint: use the extensibility documentation)

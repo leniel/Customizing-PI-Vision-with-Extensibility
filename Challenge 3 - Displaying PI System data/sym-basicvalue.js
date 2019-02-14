@@ -27,6 +27,11 @@
 
 		function dataUpdate(newData)
 		{
+			if(!newData)
+			{
+				return;
+			}
+
 			// 1st update is sporadic and has Label and Units
 			if(newData.Label)
 			{
@@ -36,6 +41,9 @@
 
 			scope.Time = newData.Time;
 			scope.Value = newData.Value;
+
+			// Extra Credit (source is from Tag or Attribute)
+			scope.Source = newData.Path.substring(0,2).toUpperCase();
 		}
 	 };
 

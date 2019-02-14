@@ -1,0 +1,10 @@
+Challenge 4 - Working with Arrays of Data
+
+1. Create files for a custom symbol named archivedata
+2. In sym-archivedata.js, add a data array dataItems with two objects with Time and Value properties. Yesterday at 6 AM, today at 9 AM.
+3. Assign this data array to the DataItems property of scope.
+4. Display all the data items of the array in a <div> tag.
+
+
+Extra Credit:
+Display the number of values that are listed
