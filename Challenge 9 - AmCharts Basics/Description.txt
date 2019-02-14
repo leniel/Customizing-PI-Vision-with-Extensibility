@@ -1,0 +1,9 @@
+Challenge 9 - AmCharts Basics
+
+1. Create files for a custom symbol named barchart
+2. Download the AmCharts JavaScript library files and place amcharts.js and serial.js files in the libraries directory
+3. Pick any serial chart from the AmCharts Live Editor and display it in the custom symbol
+
+
+Extra Credit:
+Modify your chart – change colors, legends, axes, etc.

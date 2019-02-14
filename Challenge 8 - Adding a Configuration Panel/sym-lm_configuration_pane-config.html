@@ -1,0 +1,26 @@
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;"> 
+	<li class="k-state-active"> 
+		<span class="panel-bar-label-no-wrap">Configuration</span>
+		<div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"> 
+			<div class="config-option-ie11-overflow-fix"> 
+			
+				<div class="config-label">Display Digits:</div>
+				<input type="range" min="0" max="7" ng-model="config.DecimalPlaces"
+					style="width:100px; height:100%; float: right; margin-right:25px;"
+					title="{{config.DecimalPlaces}}""> 
+
+				<div style="width: 85%; margin: 10px 0 15px 20px;">
+					<pv-color-picker colorkeyword="Background" ng-model="config.BackgroundColor">    
+					</pv-color-picker>
+				</div>
+				
+				<div class="config-label">Border radius:</div> 
+			    <input class="config-option-single-row-input" type="range" min="0"
+					max="20" step="1" ng-model="config.BorderRadius"
+					style="width:100px; height:100%; float: right; margin-right:25px;"
+					title="{{config.BorderRadius}}"> 
+					
+			</div>
+		</div> 
+	</li>
+</ul>

@@ -1,0 +1,9 @@
+Challenge 7 - Adding Configurable Options
+
+1. In sym-archivedata.js, add default configuration options for decimal places, background color, and border radius
+2. Set the default background color to #ff5733.
+3. In sym-archivedata-template.html, add NgStyle directives to apply the styles specified in the js file.
+
+
+Extra Credit:
+Add a mouseover handler to change the background color on mouseover

@@ -1,0 +1,12 @@
+Challenge 6 - Custom Styling
+
+1. Show only values that exceed 70.
+2. Display the total number of values.
+3. Display each value rounded to two decimal places.
+4. Apply some style to your custom symbol
+    a. background color of your choice
+    b. rounded borders
+
+
+Extra Credit:
+Add a separate CSS file and move your div styling to there

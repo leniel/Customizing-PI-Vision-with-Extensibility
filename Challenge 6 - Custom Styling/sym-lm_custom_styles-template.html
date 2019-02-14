@@ -1,0 +1,7 @@
+<div class="timeseries-custom-styled">
+    <h2>{{Label}} - {{Units}}</h2>
+    <h2>Total items = #{{Values.length}}</h2>
+    <div class="values" ng-repeat='item in Values' ng-show="item.Value > 70">
+        {{item.Time}}, {{item.Value | number: 2}}
+    </div>
+</div>

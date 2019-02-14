@@ -1,0 +1,8 @@
+Challenge 8 - Adding a Configuration Panel
+
+1. In sym-archivedata-config.html, add configuration parameters for decimal places, background color and border radius
+2. Bind these to the properties within sym-archivedata-template.html
+
+
+Extra Credit:
+Use the onConfigChange callback function to find changed configuration parameter and output its old and new value to console.

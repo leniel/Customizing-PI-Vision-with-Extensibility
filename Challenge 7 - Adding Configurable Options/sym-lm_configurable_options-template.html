@@ -1,0 +1,10 @@
+<div
+ng-mouseenter="hover = true"
+ng-mouseleave="hover = false"
+ng-style="{ 'background-color': hover==true ? config.BackgroundColor : 'Turquoise', 'border-radius': config.BorderRadius+'px' }">
+    <h2>{{Label}} - {{Units}}</h2>
+    <h2>Total items = #{{Values.length}}</h2>
+    <div ng-style="{'color':config.FontColor}" ng-repeat='item in Values' ng-show="item.Value > 17">
+        {{item.Time}}, {{item.Value | number: config.DecimalPlaces}}
+    </div>
+</div>

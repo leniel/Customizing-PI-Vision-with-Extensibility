@@ -1,0 +1,11 @@
+.timeseries-custom-styled
+{
+    border-radius: 7px;
+    background-color: lightseagreen;
+}
+
+.timeseries-custom-styled .values
+{
+    background-color: black;
+    color: white;
+}
