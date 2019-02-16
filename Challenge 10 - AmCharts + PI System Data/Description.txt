@@ -1,0 +1,10 @@
+Challenge 10 - AmCharts + PI System Data
+
+1. In sym-barchart.js, assign makeChart() result to an object and call it chart.
+2. Modify getConfig() function so that x axis is attribute and y is value
+3. Add a function to convert data object given by the PI Vision data layer to the format of the chart.
+4. Call this function from dataupdate() and assign its result to the chart’s dataProvider property and run validateData().
+
+
+Extra Credit:
+Look at the map function documentation. Instead of showing the value at each point in time, return the difference between that value and the previous value
