@@ -1,0 +1,51 @@
+<head>
+	<style>
+		.display-tool-row.selected{
+			background-color: #3366cc;
+		}
+		table{
+			width: 90%;
+			margin: 0px auto;
+		}
+		td{
+			text-align: left;
+			vertical-align: middle;
+			padding: 1% 0px;
+		}
+		tr:nth-child(odd){
+			background-color: #EEEEEE;
+		}
+		.display-tool-thumbnail{	
+			width: 10%;
+		}
+		.display-tool-thumbnail img{
+			padding-left: 3px;
+		
+			margin: auto 0px;
+			vertical-align: middle;
+			
+			object-fit: cover;
+			width: 50px;
+			height: 50px;		
+		}
+		.display-tool-name{
+			font-size: 20px;
+			font-weight: bold;
+			padding-left: 5%;
+		}
+		#filtertext{
+			width: 90%;
+			margin: 2% auto;
+		}
+	</style>
+</head>
+
+<input type='text' id='filtertext' placeholder='Type to filter display list...' ng-model='displaypane.filtertext'/>
+<table>
+	<tr ng-repeat='display in displaypane.displays | filter: displaypane.filter' ng-click="displaypane.switchDisplay($event, display)" ng-class="display.IsOpen ? 'display-tool-row selected' : 'display-tool-row'">
+		<td class='display-tool-thumbnail'> 
+			<img ng-src="{{display.Thumbnail}}" alt='Thumb' />
+		</td>
+		<td class='display-tool-name'> {{display.Name}} </td>
+	</tr>
+</table>

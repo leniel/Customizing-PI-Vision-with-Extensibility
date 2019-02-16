@@ -1,0 +1,13 @@
+Challenge 11 - Tool Pane Basics
+
+1. Create files for a custom tool pane named helloworld
+2. Display a button on the tool pane
+3. On a click of the button alert a popup message “Hello, world”
+
+
+Extra Credit:
+Create a tool pane that allows you to navigate to other displays.
+
+Note: This one covers a lot of topics that are out of the scope of this course. Feel free to just skip right to the solution if you're stuck!
+
+* To make it work, add the tool JS file into the symbols\ext folder and its respective .html into the tools\ext folder.

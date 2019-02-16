@@ -28,36 +28,35 @@
 		// }
 	}
 
-	function createChart()
-		{
-			// amcharts theme
-			am4core.useTheme(am4themes_animated);
+	function createChart() {
+		// amcharts theme
+		am4core.useTheme(am4themes_animated);
 
-			// Create chart instance
-			var chart = am4core.create("chartContainer", am4charts.XYChart);
+		// Create chart instance
+		var chart = am4core.create("chartContainer", am4charts.XYChart);
 
-			// Create axes
-			var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-			categoryAxis.dataFields.category = "attribute";
-			categoryAxis.renderer.grid.template.location = 0;
-			categoryAxis.renderer.minGridDistance = 30;
+		// Create axes
+		var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+		categoryAxis.dataFields.category = "attribute";
+		categoryAxis.renderer.grid.template.location = 0;
+		categoryAxis.renderer.minGridDistance = 30;
 
-			var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+		var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 
-			// Create series
-			var series = chart.series.push(new am4charts.ColumnSeries());
-			series.dataFields.valueY = "value";
-			series.dataFields.categoryX = "attribute";
-			series.name = "Values";
-			series.columns.template.tooltipText = "{categoryX}: [bold]{valueY}[/]";
-			series.columns.template.fillOpacity = .8;
+		// Create series
+		var series = chart.series.push(new am4charts.ColumnSeries());
+		series.dataFields.valueY = "value";
+		series.dataFields.categoryX = "attribute";
+		series.name = "Values";
+		series.columns.template.tooltipText = "{categoryX}: [bold]{valueY}[/]";
+		series.columns.template.fillOpacity = .8;
 
-			var columnTemplate = series.columns.template;
-			columnTemplate.strokeWidth = 2;
-			columnTemplate.strokeOpacity = 1;
+		var columnTemplate = series.columns.template;
+		columnTemplate.strokeWidth = 2;
+		columnTemplate.strokeOpacity = 1;
 
-			return chart;
-		}
+		return chart;
+	}
 
 	symbolVis.prototype.init = function (scope, elem) {
 
@@ -66,10 +65,9 @@
 		var labels;
 		var previousValue = []; // For extra credit
 
-		var chart = createChart();		
-		
-		function convertoChart(data)
-		{		
+		var chart = createChart();
+
+		function convertoChart(data) {
 			// return data.Rows.map(function(item, index)
 			// {
 			// 	return {
@@ -77,19 +75,17 @@
 			// 		attribute: labels[index]
 			// 	}
 			// });
-			
-			/*** Extra Credit ***/		
-			return data.Rows.map(function(item, index)
-			{
-				if(previousValue[index] == undefined)
-				{
+
+			/*** Extra Credit ***/
+			return data.Rows.map(function (item, index) {
+				if (previousValue[index] == undefined) {
 					previousValue[index] = 0;
 				}
-			
+
 				var prevVal = previousValue[index];
 
 				previousValue[index] = item.Value;
-			
+
 				return {
 					// if current value equals previous value, show it; otherwise show the difference....
 					value: item.Value === prevVal ? item.Value : item.Value - prevVal,
@@ -97,47 +93,41 @@
 				}
 			});
 		}
-		
-		function updateLabel(data)
-		{
-			labels = data.Rows.map(function(item)
-			{
+
+		function updateLabel(data) {
+			labels = data.Rows.map(function (item) {
 				return item.Label + ' - ' + item.Units;
 			});
 
 			chart.yAxes.values[0].title.text = "See X label";
 			chart.yAxes.values[0].fontWeight = "bold";
 		}
-		
-		function dataUpdate(data)
-		{
-			if(!data)
-			{
+
+		function dataUpdate(data) {
+			if (!data) {
 				return;
 			}
 
 			//console.log(data);
 
 			// 1st time\sporadic, let's update the Labels...
-			if(data.Rows[0].Label)
-			{
+			if (data.Rows[0].Label) {
 				updateLabel(data);
 			}
 
 			// If no labels or chart...
-			if(!labels || !chart)
-			{
+			if (!labels || !chart) {
 				return;
 			}
-			
+
 			// Convert data from PI System to fit the data shape expected by amcharts...
 			var chartData = convertoChart(data);
 
 			//console.log(chartData);
 
-			chart.data = chartData; 
+			chart.data = chartData;
 
-			chart.validateData(); 
+			chart.validateData();
 		}
 	};
 
