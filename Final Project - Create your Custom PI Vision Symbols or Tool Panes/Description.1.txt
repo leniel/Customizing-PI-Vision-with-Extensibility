@@ -1,0 +1,16 @@
+You're now ready to start putting your skills to use!
+
+To complete this course and receive a certificate of completion, you must submit a successful final project before the end of the course period. If you have any questions about this, please contact your course facilitator or ask on the discussion forums.
+
+Project Description:
+
+Create any custom PI Vision symbol(s) or tools pane(s) that would be helpful for you and your organization. Add comments to your code explaining the logic within the symbols & tool pane. If you'd like, you may share the link to your GitbHub repository on the discussion forums or email the link directly to your course facilitator. If you are not familiar with GitHub, refer to Submit a Final Project using Github.
+
+Before beginning the project, you must work out with the facilitator, a final project that meets the following criteria:
+
+The project must use the PI Vision extensibility framework
+The project must be of sufficient difficulty that it provides a challenge
+
+Note about Original Work:
+
+Please remember that no extensions will be given for the final project.  Your submission must be your own work, and not copied from another student, course videos, ebook or online resources. No credit would be given for plagiarized work, partially completed work, and no refunds would be given for failed projects.
