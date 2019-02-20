@@ -30,38 +30,6 @@
 		// }
 	}
 
-	function createChart()
-	{
-
-		// amcharts theme
-		am4core.useTheme(am4themes_animated);
-
-		// Create chart instance
-		var chart = am4core.create("chartContainer", am4charts.XYChart);
-
-		// Create axes
-		var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-		categoryAxis.dataFields.category = "attribute";
-		categoryAxis.renderer.grid.template.location = 0;
-		categoryAxis.renderer.minGridDistance = 30;
-
-		var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-
-		// Create series
-		var series = chart.series.push(new am4charts.ColumnSeries());
-		series.dataFields.valueY = "value";
-		series.dataFields.categoryX = "attribute";
-		series.name = "Values";
-		series.columns.template.tooltipText = "{categoryX}: [bold]{valueY}[/]";
-		series.columns.template.fillOpacity = .8;
-
-		var columnTemplate = series.columns.template;
-		columnTemplate.strokeWidth = 2;
-		columnTemplate.strokeOpacity = 1;
-
-		return chart;
-	}
-
 	function setupEsriMap(points)
 	{
 		require([
